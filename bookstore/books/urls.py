@@ -5,9 +5,9 @@ from books.views import BookViewSet
 from users.views import UserViewSet
 
 router = routers.DefaultRouter()
-router.register(r'api/books', BookViewSet)
-router.register(r'api/users', UserViewSet)
+router.register(r'books', BookViewSet)
+router.register(r'users', UserViewSet)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('api/', include(router.urls))
 ]
